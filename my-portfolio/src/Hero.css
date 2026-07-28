@@ -1,0 +1,182 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 80px 24px;
+}
+
+/* Background video and overlay wrapper */
+.hero-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Lilac to Slate Gradient Overlay with 75% average opacity */
+.hero-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(217, 205, 227, 0.78) 0%,
+    rgba(30, 18, 51, 0.82) 100%
+  );
+  mix-blend-mode: normal;
+}
+
+/* Centered content column */
+.hero-content {
+  position: relative;
+  z-index: 2; /* Sits above video and overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  gap: 32px; /* Generous vertical spacing */
+}
+
+/* Circular avatar container and image */
+.hero-avatar-wrapper {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  padding: 4px;
+  background: transparent;
+  border: 4px solid #F5F3F8; /* Soft-tint border separator */
+  box-shadow: 0 10px 30px rgba(30, 18, 51, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-avatar-wrapper:hover {
+  transform: scale(1.03);
+}
+
+.hero-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Greeting styling */
+.hero-title {
+  color: #FFFFFF;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  text-shadow: 0 2px 10px rgba(30, 18, 51, 0.15);
+}
+
+/* Subtitle styling */
+.hero-subtitle {
+  color: rgba(245, 243, 248, 0.75); /* Muted soft off-white */
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: -10px 0 8px; /* Slightly closer to greeting but spaced from social icons */
+  letter-spacing: 0.5px;
+}
+
+/* Social icons layout */
+.hero-social-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Circular social button styling */
+.hero-social-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  background-color: #F5F3F8; /* Soft-tint white background */
+  border-radius: 50%;
+  color: #1E1233; /* Deep slate icon color */
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(30, 18, 51, 0.15);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+              box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+              background-color 0.3s ease;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Hover lift and shadow effect */
+.hero-social-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(30, 18, 51, 0.3);
+  background-color: #FFFFFF;
+}
+
+.hero-social-btn:active {
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 70vh;
+    padding: 60px 16px;
+  }
+
+  .hero-content {
+    gap: 24px;
+  }
+
+  .hero-avatar-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+    margin: -6px 0 4px;
+  }
+
+  .hero-social-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .social-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
