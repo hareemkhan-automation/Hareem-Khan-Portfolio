@@ -65,19 +65,19 @@ const skillCategories: SkillCategory[] = [
       'CRM'
     ]
   },
-  {
-    id: 'growth-strategy',
-    category: 'Growth Strategy',
-    icon: 'Target',
-    skills: [
-      'Growth Strategy',
-      'Funnel Analysis',
-      'Conversion Optimization',
-      'A/B Testing',
-      'Multi-channel Outreach',
-      'Retention Strategy'
-    ]
-  },
+//   {
+//     id: 'growth-strategy',
+//     category: 'Growth Strategy',
+//     icon: 'Target',
+//     skills: [
+//       'Growth Strategy',
+//       'Funnel Analysis',
+//       'Conversion Optimization',
+//       'A/B Testing',
+//       'Multi-channel Outreach',
+//       'Retention Strategy'
+//     ]
+//   },
   {
     id: 'product-market',
     category: 'Product & Market',

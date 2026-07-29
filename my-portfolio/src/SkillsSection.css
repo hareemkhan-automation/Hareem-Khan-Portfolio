@@ -17,6 +17,7 @@
     linear-gradient(135deg, var(--bg-light-lavender) 0%, #d8cfe3 100%);
   color: var(--color-plum-dark);
   box-sizing: border-box;
+  padding-top: 0px !important; /* Offset for fixed top navigation bar */
 }
 
 .skills-section__header {
