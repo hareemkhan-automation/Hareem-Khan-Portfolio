@@ -19,14 +19,14 @@ const slides = [
   },
   {
     image: '/slide%203%20background%20image.jpeg',
-    title: 'Built with intention',
-    description: 'Every interaction is crafted to feel seamless on any screen size.'
+    title: 'Digital Marketing Manager',
+    description: "Growth means nothing if nobody notices it. I've pushed audience engagement up 45 percent without touching the budget, just sharper content, better targeting, and design that actually stops someone mid scroll. I don't hand this off to a marketing team either. I build the message and I put it in front of the right people myself."
   },
   {
     image: '/slide%204%20background%20image.jpeg',
-    title: 'A portfolio that evolves',
-    description: 'Fresh perspectives and refined execution for every new chapter.'
-  }
+    title: 'AI & Automation Engineer',
+    description: "While most people are still doing things manually, I've already automated it. An inbox that reads itself and replies before anyone opens it. Systems that used to take a team now running quietly in the background without anyone babysitting them. If a process eats up hours every week, chances are I've already built a way to make it disappear."
+  },
 ]
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
   useEffect(() => {
     const timer = window.setInterval(() => {
       setActiveIndex((current) => (current + 1) % slides.length)
-    }, 10000)
+    }, 20000)
 
     return () => window.clearInterval(timer)
   }, [])
@@ -54,6 +54,10 @@ function App() {
       {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
       <Navbar />
       <Hero />
+
+      <div>
+        <h1 className='navbar-logo'>About Me</h1>
+      </div>
 
       <section className="about-section" id="about">
         <div className="about-slideshow" aria-label="About slideshow">

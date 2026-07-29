@@ -4,7 +4,7 @@ import './Hero.css';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="hero-section" id="about">
+    <section className="hero-section" id="hero">
       {/* Background Video */}
       <div className="hero-video-container">
         <video

@@ -53,7 +53,7 @@
   text-align: center;
   width: 100%;
   max-width: 800px;
-  gap: 32px; /* Generous vertical spacing */
+  /* gap: 32px; Generous vertical spacing */
 }
 
 /* Circular avatar container and image */
