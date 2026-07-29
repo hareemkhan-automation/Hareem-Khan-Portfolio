@@ -39,8 +39,8 @@ export const Navbar: React.FC = () => {
             </a>
           </li>
           <li className="navbar-item">
-            <a href="#experience" className="navbar-link" onClick={closeMenu}>
-              Experience
+            <a href="#skills" className="navbar-link" onClick={closeMenu}>
+              Skills
             </a>
           </li>
           <li className="navbar-item">
@@ -49,9 +49,10 @@ export const Navbar: React.FC = () => {
             </a>
           </li>
           <li className="navbar-item">
-            <a href="#skills" className="navbar-link" onClick={closeMenu}>
-              Skills
+            <a href="#experience" className="navbar-link" onClick={closeMenu}>
+              Experience
             </a>
+            
           </li>
           <li className="navbar-item">
             <a href="#contact" className="navbar-link" onClick={closeMenu}>

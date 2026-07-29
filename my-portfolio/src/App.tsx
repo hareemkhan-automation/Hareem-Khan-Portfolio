@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import LoadingScreen from './LoadingScreen'
 import Navbar from './Navbar'
 import Hero from './Hero'
+import SkillsSection from './SkillsSection'
 import './App.css'
 
 const slides = [
@@ -105,6 +106,11 @@ function App() {
           </div>
         </div>
       </section>
+
+ <div>
+        <h1 className='navbar-logo'>Skills</h1>
+      </div>
+      <SkillsSection />
     </>
   )
 }
