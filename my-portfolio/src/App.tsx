@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import LoadingScreen from './LoadingScreen'
 import Navbar from './Navbar'
 import Hero from './Hero'
+import Projects from './components/Projects'
 import SkillsSection from './SkillsSection'
 import './App.css'
 
@@ -111,6 +112,10 @@ function App() {
         <h1 className='navbar-logo'>Skills</h1>
       </div>
       <SkillsSection />
+      <div>
+        <h1 className='navbar-logo'>Projects</h1>
+      </div>
+      <Projects />
     </>
   )
 }
