@@ -11,7 +11,7 @@
 
 .skills-section {
   width: 100%;
-  padding: clamp(2rem, 4vw, 3rem) clamp(1.25rem, 3vw, 2rem) clamp(3rem, 6vw, 5rem);
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.25rem, 3vw, 2rem) 0;
   background:
     radial-gradient(circle at top left, rgba(255, 255, 255, 0.35), transparent 32%),
     linear-gradient(135deg, var(--bg-light-lavender) 0%, #d8cfe3 100%);

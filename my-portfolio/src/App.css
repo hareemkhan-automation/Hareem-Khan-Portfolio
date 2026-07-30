@@ -3,7 +3,7 @@
   margin: 0;
   position: relative;
   overflow: hidden;
-  background: var(--accent);
+  background: #605271;
 }
 
 .about-slideshow {

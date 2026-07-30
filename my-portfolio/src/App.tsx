@@ -4,6 +4,8 @@ import Navbar from './Navbar'
 import Hero from './Hero'
 import Projects from './components/Projects'
 import SkillsSection from './SkillsSection'
+import Experience from './components/Experience'
+import Contact from './components/Contact'
 import './App.css'
 
 const slides = [
@@ -116,6 +118,11 @@ function App() {
         <h1 className='navbar-logo'>Projects</h1>
       </div>
       <Projects />
+      <div>
+        <h1 className='navbar-logo'>Experience</h1>
+      </div>
+      <Experience />
+      <Contact />
     </>
   )
 }

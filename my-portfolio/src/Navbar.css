@@ -72,13 +72,19 @@
   padding: 10px 24px;
   border-radius: 50px; /* Pill shape */
   box-shadow: 0 4px 10px rgba(30, 18, 51, 0.15);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: transform 0.24s ease, background-color 0.24s ease, box-shadow 0.24s ease;
 }
 
-.navbar-cta:hover {
-  background-color: #31204F; /* Slightly lighter purple-indigo shade */
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(30, 18, 51, 0.25);
+.navbar-cta:hover,
+.navbar-cta:focus-visible {
+  background-color: #2C2560;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(30, 18, 51, 0.24);
+  outline: none;
+}
+
+.navbar-cta:focus-visible {
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.32);
 }
 
 .navbar-cta:active {
