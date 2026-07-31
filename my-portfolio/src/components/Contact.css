@@ -9,6 +9,15 @@
   text-align: left;
 }
 
+.contact-section__eyebrow {
+  margin: 0 0 0.4rem;
+  color: #6D28D9;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
 .contact-section__title {
   margin: 0 0 0.65rem;
   font-size: clamp(2rem, 3vw, 2.75rem);
@@ -79,6 +88,16 @@
   color: #4A3B5C;
   opacity: 0.85;
   line-height: 1.75;
+}
+
+.contact-info-card__note a {
+  color: #6D28D9;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-info-card__note a:hover {
+  text-decoration: underline;
 }
 
 .contact-cards {
@@ -196,6 +215,11 @@
 .contact-form__button:hover {
   transform: translateY(-1px);
   box-shadow: 0 14px 30px rgba(147, 112, 219, 0.25);
+}
+
+.contact-form__field--textarea textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
 @media (max-width: 1024px) {

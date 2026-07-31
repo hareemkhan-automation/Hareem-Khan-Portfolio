@@ -27,9 +27,10 @@ export default function Contact() {
   return (
     <section className="contact-section" id="contact">
       <div className="contact-section__header">
+        <p className="contact-section__eyebrow">Let’s work together</p>
         <h2 className="contact-section__title">CONTACT</h2>
         <p className="contact-section__subtitle">
-          Open to full-time roles, freelance projects, and collaborations
+          Open to full-time roles, freelance projects, and collaborations that need sharp strategy and dependable execution.
         </p>
       </div>
 
@@ -39,10 +40,10 @@ export default function Contact() {
             <p className="contact-info-card__eyebrow">LET'S CONNECT</p>
             <h3 className="contact-info-card__title">Have a project in mind?</h3>
             <p className="contact-info-card__copy">
-              Drop me a message and let's make it happen. I respond quickly to meaningful opportunities.
+              I help teams turn ideas into clear systems, better outreach, and results that actually move the business forward.
             </p>
             <p className="contact-info-card__note">
-              Messages go straight to my inbox at <strong>hareematique098@gmail.com</strong>.
+              Send me a note at <a href="mailto:hareematique098@gmail.com">hareematique098@gmail.com</a> and I’ll reply soon.
             </p>
           </div>
 
@@ -82,17 +83,17 @@ export default function Contact() {
 
             <label className="contact-form__field">
               <span>Name</span>
-              <input type="text" placeholder="Your name" />
+              <input type="text" name="name" placeholder="Your name" required />
             </label>
 
             <label className="contact-form__field">
               <span>Email</span>
-              <input type="email" placeholder="you@email.com" />
+              <input type="email" name="email" placeholder="you@email.com" required />
             </label>
 
             <label className="contact-form__field contact-form__field--textarea">
               <span>Message</span>
-              <textarea rows="5" placeholder="Tell me about your project..."></textarea>
+              <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
             </label>
 
             <button type="submit" className="contact-form__button">
