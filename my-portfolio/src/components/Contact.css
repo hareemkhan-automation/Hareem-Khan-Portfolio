@@ -1,6 +1,6 @@
 .contact-section {
   background: #D9CDE3;
-  padding: 5rem 1.5rem 4rem;
+  padding: 0 1.5rem 4rem;
 }
 
 .contact-section__header {
@@ -16,11 +16,11 @@
 
 .contact-section__eyebrow {
   margin: 0 0 0.6rem;
-  color: #4A3B5C;
+  color: #1E1233;
   text-transform: none;
-  letter-spacing: 0.24em;
-  font-size: 0.95rem;
-  font-weight: 800;
+  letter-spacing: 0.08em;
+  font-size: 1.4rem;
+  font-weight: 1000;
 }
 
 .contact-section__title {
@@ -28,6 +28,7 @@
   font-size: clamp(2.75rem, 4vw, 4.25rem);
   line-height: 1.05;
   color: #1F1A2A;
+  font-weight: 900;
 }
 
 .contact-section__subtitle {
