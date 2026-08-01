@@ -6,6 +6,7 @@ import Projects from './components/Projects'
 import SkillsSection from './SkillsSection'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 import './App.css'
 
 const slides = [
@@ -123,6 +124,7 @@ function App() {
       </div>
       <Experience />
       <Contact />
+      <Footer />
     </>
   )
 }
