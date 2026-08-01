@@ -17,7 +17,7 @@
 .contact-section__eyebrow {
   margin: 0 0 0.6rem;
   color: #4A3B5C;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.24em;
   font-size: 0.95rem;
   font-weight: 800;

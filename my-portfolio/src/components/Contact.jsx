@@ -27,7 +27,7 @@ export default function Contact() {
   return (
     <section className="contact-section" id="contact">
       <div className="contact-section__header">
-        <p className="contact-section__eyebrow">CONTACT</p>
+        <p className="contact-section__eyebrow">Contact</p>
         <h2 className="contact-section__title">Let’s work together</h2>
         <p className="contact-section__subtitle">
           Open to full-time roles, freelance projects, and collaborations that need sharp strategy and dependable execution.
