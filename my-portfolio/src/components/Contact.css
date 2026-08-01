@@ -1,36 +1,41 @@
 .contact-section {
-  background: #E6E6FA;
-  padding: 4rem 1.5rem;
+  background: #D9CDE3;
+  padding: 5rem 1.5rem 4rem;
 }
 
 .contact-section__header {
-  max-width: 1120px;
-  margin: 0 auto 1.5rem;
-  text-align: left;
+  max-width: 820px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.contact-section__header > * {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact-section__eyebrow {
-  margin: 0 0 0.4rem;
-  color: #6D28D9;
+  margin: 0 0 0.6rem;
+  color: #4A3B5C;
   text-transform: uppercase;
-  letter-spacing: 0.28em;
-  font-size: 0.78rem;
-  font-weight: 700;
+  letter-spacing: 0.24em;
+  font-size: 0.95rem;
+  font-weight: 800;
 }
 
 .contact-section__title {
-  margin: 0 0 0.65rem;
-  font-size: clamp(2rem, 3vw, 2.75rem);
-  color: #4A3B5C;
+  margin: 0 0 0.85rem;
+  font-size: clamp(2.75rem, 4vw, 4.25rem);
+  line-height: 1.05;
+  color: #1F1A2A;
 }
 
 .contact-section__subtitle {
-  margin: 0;
-  max-width: 640px;
-  font-size: 1rem;
-  line-height: 1.75;
+  margin: 0 auto;
+  max-width: 720px;
+  font-size: 1.05rem;
+  line-height: 1.8;
   color: #4A3B5C;
-  text-align: left;
 }
 
 .contact-grid {
@@ -47,6 +52,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  text-align: left;
 }
 
 .contact-info-card,
