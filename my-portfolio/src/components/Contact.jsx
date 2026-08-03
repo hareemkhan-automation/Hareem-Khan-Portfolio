@@ -24,6 +24,23 @@ const contactItems = [
 ]
 
 export default function Contact() {
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    const form = event.currentTarget
+    const formData = new FormData(form)
+    const name = formData.get('name')?.toString().trim() || ''
+    const email = formData.get('email')?.toString().trim() || ''
+    const message = formData.get('message')?.toString().trim() || ''
+
+    const subject = encodeURIComponent(`Portfolio enquiry from ${name || 'a visitor'}`)
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    )
+
+    window.location.href = `mailto:hareematique098@gmail.com?subject=${subject}&body=${body}`
+  }
+
   return (
     <section className="contact-section" id="contact">
       <div className="contact-section__header">
@@ -71,7 +88,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <form className="contact-right" action="#" method="post">
+        <form className="contact-right" onSubmit={handleSubmit}>
           <div className="contact-form-card">
             <div className="contact-form-card__header">
               <p className="contact-form-card__eyebrow">Message Me</p>

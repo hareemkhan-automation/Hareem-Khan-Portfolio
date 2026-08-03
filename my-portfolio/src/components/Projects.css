@@ -71,9 +71,10 @@
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 24px;
+  gap: clamp(16px, 2vw, 24px);
   max-width: 1280px;
   margin: 0 auto;
+  align-items: start;
 }
 
 @media (min-width: 768px) {
@@ -92,7 +93,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 100%;
+  height: 100%;
+  min-height: 0;
   background: #FFFFFF;
   border: 1px solid #D5C8E4;
   border-radius: 24px;
@@ -142,10 +144,10 @@
 }
 
 .project-card-content {
-  padding: 24px;
+  padding: clamp(16px, 2vw, 24px);
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: clamp(12px, 1.6vw, 18px);
   text-align: left;
   flex: 1;
 }
@@ -180,52 +182,51 @@
   margin: 0;
   color: #4A3B60;
   font-size: 0.96rem;
-  line-height: 1.6;
-  min-height: 4.8rem;
+  line-height: 1.5;
+  min-height: 0;
   overflow: hidden;
 }
 
 .project-card-footer {
   margin-top: auto;
-}
-
-.project-card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .project-card-tech-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   flex: 1;
+  min-width: 0;
 }
 
 .project-card-tech-pill {
   display: inline-flex;
   align-items: center;
-  padding: 8px 10px;
+  padding: 7px 9px;
   border-radius: 999px;
   background: #F0EBFA;
   color: #4A3B60;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
 }
 
 .project-card-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 18px;
+  padding: 10px 14px;
   border-radius: 999px;
   border: 1px solid #4A3B60;
   background: #FFFFFF;
   color: #4A3B60;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
+  white-space: nowrap;
   transition: background 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -241,12 +242,12 @@
 }
 
 .projects-show-more-button {
-  padding: 14px 24px;
+  padding: 12px 20px;
   border-radius: 999px;
   border: none;
   background: #4A3B60;
   color: #FFFFFF;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease;
 }

@@ -7,46 +7,62 @@ interface LoadingScreenProps {
 
 export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
   const [isFadingOut, setIsFadingOut] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    // Disable body scroll while loading screen is active
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+
     document.body.style.overflow = 'hidden';
 
-    // Fallback timer: fade out after 2.5 seconds maximum, in case video fails to play or load
-    const fallbackTimer = setTimeout(() => {
+    const fallbackTimer = window.setTimeout(() => {
       handleVideoEnd();
-    }, 2500);
+    }, isMobile ? 1200 : 2200);
+
+    const video = videoRef.current;
+    if (!isMobile && video) {
+      video.play().catch(() => {
+        handleVideoEnd();
+      });
+    }
 
     return () => {
-      // Restore body scroll on unmount
       document.body.style.overflow = '';
-      clearTimeout(fallbackTimer);
+      window.clearTimeout(fallbackTimer);
     };
-  }, []);
+  }, [isMobile]);
 
   const handleVideoEnd = () => {
     if (isFadingOut) return;
     setIsFadingOut(true);
-    // Wait for the fade-out CSS transition to complete (600ms) before unmounting
-    setTimeout(() => {
+    window.setTimeout(() => {
       onComplete();
-    }, 600);
+    }, 800);
   };
 
   return (
     <div className={`loading-overlay ${isFadingOut ? 'fade-out' : ''}`}>
-      <div className="video-container">
-        <video
-          ref={videoRef}
-          src="/loading-video.mp4"
-          autoPlay
-          muted
-          playsInline
-          onEnded={handleVideoEnd}
-          className="loading-video"
-        />
-      </div>
+      {isMobile ? (
+        <div className="loading-mobile-shell" aria-hidden="true">
+          <div className="loading-mobile-ring" />
+        </div>
+      ) : (
+        <div className="video-container">
+          <video
+            ref={videoRef}
+            src="/loading-video.mp4"
+            autoPlay
+            muted
+            playsInline
+            disablePictureInPicture
+            controls={false}
+            preload="auto"
+            onEnded={handleVideoEnd}
+            className="loading-video"
+          />
+        </div>
+      )}
     </div>
   );
 };
