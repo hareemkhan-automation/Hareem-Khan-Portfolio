@@ -60,7 +60,13 @@ export const Navbar: React.FC = () => {
             </a>
           </li>
           <li className="navbar-item cta-wrapper">
-            <a href="#hire-me" className="navbar-cta" onClick={closeMenu}>
+            <a
+              href="/Hareem Khan Resume.pdf"
+              className="navbar-cta"
+              onClick={closeMenu}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Hire Me
             </a>
           </li>

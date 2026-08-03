@@ -36,7 +36,7 @@ export const Hero: React.FC = () => {
         <div className="hero-social-row">
           {/* LinkedIn Icon */}
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/hareematique/"
             target="_blank"
             rel="noopener noreferrer"
             className="hero-social-btn"
@@ -54,7 +54,7 @@ export const Hero: React.FC = () => {
 
           {/* GitHub Icon */}
           <a
-            href="https://github.com"
+            href="https://github.com/hareemkhan-automation"
             target="_blank"
             rel="noopener noreferrer"
             className="hero-social-btn"
@@ -72,7 +72,7 @@ export const Hero: React.FC = () => {
 
           {/* Gmail Icon */}
           <a
-            href="mailto:hareemkhan@example.com"
+            href="mailto:hareematique098@gmail.com"
             className="hero-social-btn"
             aria-label="Gmail"
           >
