@@ -191,7 +191,7 @@
 
 .contact-form__field input,
 .contact-form__field textarea {
-  width: 100%;
+  width: 80%;
   border: 1px solid #E9D5FF;
   border-radius: 18px;
   background: #FFFFFF;

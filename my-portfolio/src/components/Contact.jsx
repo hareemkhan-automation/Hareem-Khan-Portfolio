@@ -13,8 +13,8 @@ const contactItems = [
   },
   {
     label: 'LinkedIn',
-    value: 'linkedin.com/in/hareematique098/',
-    href: 'https://www.linkedin.com/in/hareematique098/',
+    value: 'Hareem Khan',
+    href: 'https://www.linkedin.com/in/hareematique/',
   },
   {
     label: 'GitHub',
