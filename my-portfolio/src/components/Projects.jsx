@@ -10,7 +10,7 @@ const projectsData = [
     category: "AI · FULL STACK",
     description: "Real-time voice-to-voice translation app with modular AI models designed for easy swapping without modifying frontend logic.",
     techStack: ["React", "FastAPI", "NLLB-200", "Whisper", "Docker"],
-    githubUrl: "https://github.com/hakhan-byte",
+    githubUrl: "https://github.com/hareemkhan-automation/AI-Voice-Translator",
     image: "/project-images/ai-voice-translator.png"
   },
   {
@@ -19,7 +19,7 @@ const projectsData = [
     category: "AI · FULL STACK",
     description: "Lightweight, low-latency full-stack conversational assistant powered by Groq and Llama 3.1.",
     techStack: ["React", "FastAPI", "Groq API", "Llama 3.1", "MUI"],
-    githubUrl: "https://github.com/hakhan-byte",
+    githubUrl: "https://github.com/hareemkhan-automation/Chatbot-App",
     image: "/project-images/ai-chatbot.png"
   },
   {
@@ -28,7 +28,7 @@ const projectsData = [
     category: "WEB · FRONTEND",
     description: "Role-based task management board with drag-and-drop workflow stages, RBAC permissions, and local storage.",
     techStack: ["React 19", "Vite", "JavaScript", "Lucide Icons", "LocalStorage"],
-    githubUrl: "https://github.com/hakhan-byte",
+    githubUrl: "https://github.com/hareemkhan-automation/kanban-tasker",
     image: "/project-images/kanban-app.png"
   },
   {
@@ -37,7 +37,7 @@ const projectsData = [
     category: "AI · AUTOMATION",
     description: "Automated n8n workflow to filter incoming emails and generate context-aware AI draft responses in Outlook.",
     techStack: ["n8n", "Gemini API", "Outlook", "Automation"],
-    githubUrl: "https://github.com/hakhan-byte",
+    githubUrl: "https://github.com/hareemkhan-automation/AI-Outlook-Auto-Responder",
     image: "/project-images/outlook-automation.png"
   },
   {
@@ -55,7 +55,7 @@ const projectsData = [
     category: "AUTOMATION · PYTHON",
     description: "Scrapes and extracts accurate company metadata using domain names with strict ground-truth verification.",
     techStack: ["Python", "Playwright", "Ollama", "Gemini API", "Google Sheets"],
-    githubUrl: "https://github.com/hakhan-byte",
+    githubUrl: "https://github.com/hareemkhan-automation/Automated-Company-Data-Extractor",
     image: "/project-images/company-data-extractor.png"
   },
   {
@@ -64,7 +64,7 @@ const projectsData = [
     category: "DATABASE · BACKEND",
     description: "Normalized 7-table relational database architecture with stored procedures, audit triggers, and a Python CLI.",
     techStack: ["Python", "SQL Server", "pyodbc", "Relational DB"],
-    githubUrl: "https://github.com/hakhan-byte",
+    githubUrl: "https://github.com/hareemkhan-automation/Car-Rental-Management-System",
     image: "/project-images/car-rental-system.png"
   },
   {
@@ -73,7 +73,7 @@ const projectsData = [
     category: "CAMPAIGN · MEDIA",
     description: "Social donation campaign and documentary production raising funds to purchase clothing for underprivileged children.",
     techStack: ["Campaign Strategy", "Media Production", "Leadership"],
-    githubUrl: "https://github.com/hakhan-byte",
+    githubUrl: "https://github.com/hareemkhan-automation/Raah-e-Ehsaas",
     image: "/project-images/raah-e-ehsaas.png"
   },
   {
@@ -82,7 +82,7 @@ const projectsData = [
     category: "AI · AUDIO",
     description: "Fully offline voice cloning and text-to-speech engine built with Coqui TTS as an open-source ElevenLabs alternative.",
     techStack: ["Python", "Coqui TTS", "PyTorch", "librosa", "Colab"],
-    githubUrl: "https://github.com/hakhan-byte",
+    githubUrl: "https://github.com/hareemkhan-automation/Local-Voice-Cloning-TTS",
     image: "/project-images/voice-cloning-tts.png"
   },
   {
@@ -91,7 +91,7 @@ const projectsData = [
     category: "PYTHON · OOP",
     description: "OOP-driven CLI application featuring fine calculations, role permissions, borrowing limits, and SHA-256 auth.",
     techStack: ["Python", "OOP", "JSON", "SHA-256"],
-    githubUrl: "https://github.com/hakhan-byte",
+    githubUrl: "https://github.com/hareemkhan-automation/Library-Management-System",
     image: "/project-images/library-management.png"
   },
   {
@@ -100,7 +100,7 @@ const projectsData = [
     category: "BUSINESS · HEALTH TECH",
     description: "Strategic case study identifying revenue disintermediation and proposing AI pattern monitoring with escrow models.",
     techStack: ["Business Strategy", "SWOT Analysis", "Risk Assessment"],
-    githubUrl: "https://github.com/hakhan-byte",
+    githubUrl: "https://github.com/hareemkhan-automation/Marham-Digital-Strategy-Study",
     image: "/project-images/marham-case-study.png"
   },
   {
@@ -109,7 +109,7 @@ const projectsData = [
     category: "DATA ANALYTICS",
     description: "Exploratory data analysis on 1,000-row dataset analyzing purchasing trends, profit margins, and payment channels.",
     techStack: ["Python", "Pandas", "Matplotlib", "Data Viz"],
-    githubUrl: "https://github.com/hakhan-byte",
+    githubUrl: "https://github.com/hareemkhan-automation/Superstore-Sales-Analysis",
     image: "/project-images/superstore-analysis.png"
   },
   {
@@ -118,7 +118,7 @@ const projectsData = [
     category: "DATA SCIENCE",
     description: "Primary research study modeling undergraduate sleep habits using normal and binomial probability distributions.",
     techStack: ["MS Excel", "Applied Statistics", "Probability Modeling"],
-    githubUrl: "https://github.com/hakhan-byte",
+    githubUrl: "https://github.com/hareemkhan-automation/Sleep-Pattern-Statistical-Study",
     image: "/project-images/sleep-study.png"
   },
   {
@@ -127,7 +127,7 @@ const projectsData = [
     category: "PYTHON · OOP",
     description: "Object-oriented rule engine generating personalized routines and flagging ingredient incompatibility conflicts.",
     techStack: ["Python", "OOP", "Rule Engine", "Exception Handling"],
-    githubUrl: "https://github.com/hakhan-byte",
+    githubUrl: "https://github.com/hareemkhan-automation/Skincare-Routine-Planner",
     image: "/project-images/skincare-planner.png"
   }
 ]
