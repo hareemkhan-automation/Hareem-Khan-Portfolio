@@ -1,13 +1,41 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import headshot from './assets/headshot.jpg';
 import './Hero.css';
 
 export const Hero: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const attemptAutoplay = () => {
+      video.play().catch(() => {
+        // Browser autoplay restrictions may block playback until the user interacts.
+      });
+    };
+
+    if (video.readyState >= 2) {
+      attemptAutoplay();
+    } else {
+      video.addEventListener('canplay', attemptAutoplay, { once: true });
+      video.addEventListener('loadeddata', attemptAutoplay, { once: true });
+    }
+
+    return () => {
+      if (video) {
+        video.removeEventListener('canplay', attemptAutoplay);
+        video.removeEventListener('loadeddata', attemptAutoplay);
+      }
+    };
+  }, []);
+
   return (
     <section className="hero-section" id="hero">
       {/* Background Video */}
       <div className="hero-video-container">
         <video
+          ref={videoRef}
           src="/background-video.mp4"
           autoPlay
           loop

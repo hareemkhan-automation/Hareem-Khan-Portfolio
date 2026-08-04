@@ -16,22 +16,42 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
 
     document.body.style.overflow = 'hidden';
 
+    const video = videoRef.current;
     const fallbackTimer = window.setTimeout(() => {
       handleVideoEnd();
-    }, 1200);
+    }, 2400);
 
-    const video = videoRef.current;
-    if (!isMobile && video) {
+    const startPlayback = () => {
+      if (!video) {
+        handleVideoEnd();
+        return;
+      }
+
       video.play().catch(() => {
         handleVideoEnd();
       });
+    };
+
+    if (video) {
+      if (video.readyState >= 2) {
+        startPlayback();
+      } else {
+        video.addEventListener('canplay', startPlayback, { once: true });
+        video.addEventListener('loadeddata', startPlayback, { once: true });
+      }
+    } else {
+      handleVideoEnd();
     }
 
     return () => {
       document.body.style.overflow = '';
       window.clearTimeout(fallbackTimer);
+      if (video) {
+        video.removeEventListener('canplay', startPlayback);
+        video.removeEventListener('loadeddata', startPlayback);
+      }
     };
-  }, [isMobile]);
+  }, []);
 
   const handleVideoEnd = () => {
     if (isFadingOut) return;
