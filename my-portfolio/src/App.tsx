@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import LoadingScreen from './LoadingScreen'
 import Navbar from './Navbar'
 import Hero from './Hero'
@@ -37,6 +37,7 @@ const slides = [
 function App() {
   const [isLoading, setIsLoading] = useState(true)
   const [activeIndex, setActiveIndex] = useState(0)
+  const touchStartXRef = useRef<number | null>(null)
 
   useEffect(() => {
     const timer = window.setInterval(() => {
@@ -45,6 +46,33 @@ function App() {
 
     return () => window.clearInterval(timer)
   }, [])
+
+  const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+    touchStartXRef.current = event.touches[0]?.clientX ?? null
+  }
+
+  const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStartXRef.current === null) return
+
+    const touchEndX = event.changedTouches[0]?.clientX ?? null
+    if (touchEndX === null) {
+      touchStartXRef.current = null
+      return
+    }
+
+    const deltaX = touchStartXRef.current - touchEndX
+    const swipeThreshold = 50
+
+    if (Math.abs(deltaX) > swipeThreshold) {
+      if (deltaX > 0) {
+        goToNext()
+      } else {
+        goToPrevious()
+      }
+    }
+
+    touchStartXRef.current = null
+  }
 
   const goToPrevious = () => {
     setActiveIndex((current) => (current - 1 + slides.length) % slides.length)
@@ -65,7 +93,12 @@ function App() {
       </div>
 
       <section className="about-section" id="about">
-        <div className="about-slideshow" aria-label="About slideshow">
+        <div
+          className="about-slideshow"
+          aria-label="About slideshow"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           {slides.map((slide, index) => (
             <div
               key={slide.image}
@@ -108,6 +141,7 @@ function App() {
               →
             </button>
           </div>
+          <p className="about-swipe-hint">Swipe left or right on touch screens to navigate.</p>
         </div>
       </section>
 

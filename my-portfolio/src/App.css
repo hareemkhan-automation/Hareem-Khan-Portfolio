@@ -10,6 +10,7 @@
   position: relative;
   min-height: 100svh;
   width: 100%;
+  touch-action: pan-y;
 }
 
 .about-slide {
@@ -57,6 +58,15 @@
   align-items: center;
   gap: 0.75rem;
   z-index: 2;
+}
+
+.about-swipe-hint {
+  margin: 0.75rem auto 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  max-width: min(580px, 100%);
+  padding: 0 0.75rem;
 }
 
 .about-slide-pitch {
