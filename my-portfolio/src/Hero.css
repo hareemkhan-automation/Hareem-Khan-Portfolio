@@ -25,6 +25,10 @@
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+  display: block;
+  background: #000;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .hero-background-video::-webkit-media-controls-start-playback-button,

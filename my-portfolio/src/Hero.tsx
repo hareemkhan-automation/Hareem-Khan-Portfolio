@@ -10,9 +10,21 @@ export const Hero: React.FC = () => {
     if (!video) return;
 
     const attemptAutoplay = () => {
-      video.play().catch(() => {
-        // Browser autoplay restrictions may block playback until the user interacts.
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+      video.setAttribute('playsinline', 'true');
+      video.setAttribute('webkit-playsinline', 'true');
+
+      void video.play().catch(() => {
+        // Mobile browsers can still block autoplay until the media is ready.
       });
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        attemptAutoplay();
+      }
     };
 
     if (video.readyState >= 2) {
@@ -20,13 +32,18 @@ export const Hero: React.FC = () => {
     } else {
       video.addEventListener('canplay', attemptAutoplay, { once: true });
       video.addEventListener('loadeddata', attemptAutoplay, { once: true });
+      video.addEventListener('loadedmetadata', attemptAutoplay, { once: true });
     }
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     return () => {
       if (video) {
         video.removeEventListener('canplay', attemptAutoplay);
         video.removeEventListener('loadeddata', attemptAutoplay);
+        video.removeEventListener('loadedmetadata', attemptAutoplay);
       }
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, []);
 
