@@ -27,6 +27,13 @@
   pointer-events: none;
 }
 
+.hero-background-video::-webkit-media-controls-start-playback-button,
+.hero-background-video::-webkit-media-controls-overlay-play-button,
+.hero-background-video::-webkit-media-controls-panel {
+  display: none !important;
+  opacity: 0 !important;
+}
+
 /* Lilac to Slate Gradient Overlay with 75% average opacity */
 .hero-gradient-overlay {
   position: absolute;

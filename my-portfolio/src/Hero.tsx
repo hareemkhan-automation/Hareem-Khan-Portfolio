@@ -13,7 +13,10 @@ export const Hero: React.FC = () => {
           loop
           muted
           playsInline
+          preload="auto"
+          webkit-playsinline="true"
           className="hero-background-video"
+          aria-hidden="true"
         />
         {/* Soft Lilac to Deep Slate Gradient Overlay (75% opacity) */}
         <div className="hero-gradient-overlay" />
