@@ -16,6 +16,15 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
 
     document.body.style.overflow = 'hidden';
 
+    if (window.innerWidth <= 768) {
+      window.setTimeout(() => {
+        handleVideoEnd();
+      }, 800);
+      return () => {
+        document.body.style.overflow = '';
+      };
+    }
+
     const video = videoRef.current;
     const fallbackTimer = window.setTimeout(() => {
       handleVideoEnd();

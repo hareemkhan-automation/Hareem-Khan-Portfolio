@@ -1,11 +1,34 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import headshot from './assets/headshot.jpg';
 import './Hero.css';
 
+const isMobileViewport = () => {
+  if (typeof window === 'undefined') return false;
+  return window.matchMedia('(max-width: 768px)').matches;
+};
+
 export const Hero: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [showVideo, setShowVideo] = useState(() => !isMobileViewport());
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    const handleViewportChange = () => setShowVideo(!mediaQuery.matches);
+
+    handleViewportChange();
+
+    if (typeof mediaQuery.addEventListener === 'function') {
+      mediaQuery.addEventListener('change', handleViewportChange);
+      return () => mediaQuery.removeEventListener('change', handleViewportChange);
+    }
+
+    mediaQuery.addListener(handleViewportChange);
+    return () => mediaQuery.removeListener(handleViewportChange);
+  }, []);
+
+  useEffect(() => {
+    if (!showVideo) return;
+
     const video = videoRef.current;
     if (!video) return;
 
@@ -45,24 +68,26 @@ export const Hero: React.FC = () => {
       }
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
-  }, []);
+  }, [showVideo]);
 
   return (
     <section className="hero-section" id="hero">
       {/* Background Video */}
       <div className="hero-video-container">
-        <video
-          ref={videoRef}
-          src="/background-video.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          webkit-playsinline="true"
-          className="hero-background-video"
-          aria-hidden="true"
-        />
+        {showVideo && (
+          <video
+            ref={videoRef}
+            src="/background-video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            webkit-playsinline="true"
+            className="hero-background-video"
+            aria-hidden="true"
+          />
+        )}
         {/* Soft Lilac to Deep Slate Gradient Overlay (75% opacity) */}
         <div className="hero-gradient-overlay" />
       </div>

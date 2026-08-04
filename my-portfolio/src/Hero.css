@@ -163,6 +163,10 @@
     padding: 60px 16px;
   }
 
+  .hero-video-container {
+    display: none;
+  }
+
   .hero-content {
     gap: 24px;
   }
