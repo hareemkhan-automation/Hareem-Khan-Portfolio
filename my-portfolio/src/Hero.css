@@ -164,7 +164,12 @@
   }
 
   .hero-video-container {
-    display: none;
+    display: block;
+    background: linear-gradient(135deg, rgba(217, 205, 227, 0.95) 0%, rgba(30, 18, 51, 0.95) 100%);
+  }
+
+  .hero-gradient-overlay {
+    background: linear-gradient(135deg, rgba(217, 205, 227, 0.72) 0%, rgba(30, 18, 51, 0.85) 100%);
   }
 
   .hero-content {
