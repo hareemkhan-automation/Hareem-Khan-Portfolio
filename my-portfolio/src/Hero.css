@@ -1,13 +1,13 @@
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: 80vh;
+  min-height: calc(100vh - 80px);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   box-sizing: border-box;
-  padding: 80px 24px;
+  padding: 0 24px;
 }
 
 /* Background video and overlay wrapper */
@@ -62,9 +62,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 100%;
-  max-width: 800px;
-  /* gap: 32px; Generous vertical spacing */
+  width: min(100%, 760px);
+  max-width: 760px;
+  gap: 24px;
+  margin: 0 auto;
 }
 
 /* Circular avatar container and image */
