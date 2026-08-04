@@ -50,12 +50,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1.5rem;
   background: linear-gradient(135deg, #d9cde3 0%, #c9b7d8 100%);
 }
 
 .loading-mobile-ring {
-  width: 72px;
-  height: 72px;
+  width: clamp(56px, 12vw, 72px);
+  height: clamp(56px, 12vw, 72px);
   border-radius: 50%;
   border: 3px solid rgba(74, 59, 96, 0.25);
   border-top-color: #4a3b60;
@@ -87,5 +88,9 @@
 
   .loading-video {
     object-fit: cover;
+  }
+
+  .loading-mobile-shell {
+    padding: 1rem;
   }
 }

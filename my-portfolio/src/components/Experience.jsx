@@ -2,7 +2,7 @@ import './Experience.css'
 
 const experienceData = [
   {
-    jobTitle: 'AI & Automation Engineer (Internship)',
+    jobTitle: 'AI & Automation Engineer',
     company: 'Cinnova International',
     timeline: 'Jun 2026 – Aug 2026',
     summary:
@@ -16,7 +16,7 @@ const experienceData = [
   {
     jobTitle: 'Business Development, AI & Automation Specialist',
     company: 'Highscore Company',
-    timeline: 'Dec 2025 – Present',
+    timeline: 'Dec 2025 – Jun 2026',
     summary:
       'Drove AI-powered B2B lead generation, client proposals, and sales funnel optimization to accelerate business growth.',
     bullets: [
@@ -25,10 +25,17 @@ const experienceData = [
       'Partnered with product teams on messaging for flagship launches, driving a 20% lift in newly acquired user engagement.',
     ],
   },
+   {
+    jobTitle: 'Academic Operations & Admissions Coordinator',
+    company: 'FAST NUCES Lahore',
+    timeline: 'June 2025 – August 2025',
+    summary:
+      'Streamlined admissions workflows, student operations, and multi-cohort compliance in a fast-paced environment.',
+  },
   {
-    jobTitle: 'Business Development Specialist',
+    jobTitle: 'Business Developer and Digital Marketing Manager',
     company: 'Zai Systems',
-    timeline: 'Dec 2023 – Nov 2025',
+    timeline: 'Feb 2022 – Nov 2025',
     summary:
       'Expanded the active client base for software and digital solutions through structured outreach, market research, and client relationship management.',
     bullets: [
@@ -37,24 +44,24 @@ const experienceData = [
       'Translated client pain points into structured engineering feature requests that were directly integrated into product roadmap releases.',
     ],
   },
+  // {
+  //   jobTitle: 'Academic Operations & Admissions Coordinator',
+  //   company: 'FAST NUCES Lahore',
+  //   timeline: 'June 2025 – August 2025',
+  //   summary:
+  //     'Streamlined admissions workflows, student operations, and multi-cohort compliance in a fast-paced environment.',
+  // },
   {
-    jobTitle: 'Academic Operations & Admissions Coordinator',
-    company: 'FAST NUCES Lahore',
-    timeline: 'Oct 2021 – Nov 2023',
-    summary:
-      'Streamlined admissions workflows, student operations, and multi-cohort compliance in a fast-paced environment.',
-  },
-  {
-    jobTitle: 'Digital Marketing & Visual Designer',
-    company: 'Freelance / Self-Employed',
-    timeline: 'Oct 2020 – Sep 2021',
+    jobTitle: 'Content and Digital Marketing Executive',
+    company: 'Black Bird Packaging Company',
+    timeline: 'Dec 2019 – July 2021',
     summary:
       'Managed complete brand identities, platform-specific content strategies, and graphic design for growing brands.',
   },
   {
-    jobTitle: 'Growth Content Writer & Freelance Strategist',
+    jobTitle: 'Freelance Digital Strategy, Content and Analytics Consultant',
     company: 'Freelance',
-    timeline: 'Jan 2019 – Sep 2020',
+    timeline: 'Jan 2019 – Present',
     summary:
       'Delivered multi-channel content, SEO planning, and digital growth strategies for tech startups and SMBs.',
   },

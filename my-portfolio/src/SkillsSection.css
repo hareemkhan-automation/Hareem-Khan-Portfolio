@@ -73,7 +73,7 @@
   max-height: clamp(220px, 26vw, 250px);
   border: 1px solid rgba(74, 62, 86, 0.16);
   border-radius: 1.25rem;
-  background: var(--bg-light-lavender);
+  background: #ffffff;
   color: var(--color-plum-dark);
   box-shadow: 0 10px 24px rgba(18, 10, 26, 0.12);
   transition: max-height 0.4s ease-in-out, transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
@@ -86,7 +86,7 @@
 .skill-card:focus-visible {
   transform: scale(1.02) translateY(-4px);
   max-height: 800px;
-  background-color: #BEB0D4;
+  background-color: #f7f2ff;
   border-color: #1E1428;
   box-shadow: 0 12px 24px rgba(30, 20, 40, 0.12);
 }
@@ -150,8 +150,8 @@
 }
 
 .skill-tag {
-  background: rgba(255, 255, 255, 0.5);
-  color: var(--color-plum-dark);
+  background: #E5DCEF;
+  color: #4a3b60;
 }
 
 @media (max-width: 900px) {

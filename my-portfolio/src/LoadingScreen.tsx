@@ -18,7 +18,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
 
     const fallbackTimer = window.setTimeout(() => {
       handleVideoEnd();
-    }, isMobile ? 1200 : 2200);
+    }, 1200);
 
     const video = videoRef.current;
     if (!isMobile && video) {
